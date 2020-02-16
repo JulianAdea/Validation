@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <title>Form Validation</title>
+    
+</head>
+<body>
+    <div id="first" style="position:relative; left:80px;">
+        <label for="eType"><b>Event type: </b></label>
+        <select id="Events" name="eType" required onchange="validateDropbox()" style="position: relative; left: 120px;" required>
+                <option value="Choose one: ">Choose one</option>
+                <option value="wedding">Wedding</option>
+                <option value="birthday">Bithday</option>
+                <option value="reunion">Reunion</option>
+                
+          </select>
+          <br><br> 
+
+          <label for="Event Title"><b>Event Title: </b></label>
+          <input type="text" name="eventTitle" id="11" style="position: relative; left: 120px;" required onchange="eTitleVal()"> 
+          <br><br> 
+
+          <label for="Date from"><b>Event Dates: </b></label>
+          <input type="text" name="dateStart" id="22" style="position: relative; left: 113px;" required onchange="eDateSVal()">  to 
+          <input type="text" name="dateTo" id="33" style="position: relative; left: 120px;" required onchange="eDateSVal()">
+          <br><br>
+
+          <label for="Postdates"><b>Posting Dates: </b></label>
+          <input type="text" name="postDate" id="44" style="position: relative; left: 105px;" required onchange="ePostDateVal()">
+    </div>
+    <br><br><br>
+    <div id="second">
+        <fieldset>      
+            <input type="checkbox" id="eRegReq" name="evRegReq" value="True">
+        <label for="eRegReq">Is Registration Requierd?</label><br>        
+
+        <input type="checkbox" id="eFamAssoc" name="evFamAssoc" value="True">
+        <label for="eFamAssoc">Is this event associated with any Family Programs</label><br> 
+
+        <input type="checkbox" id="eAutomail" name="evAutomail" value="True">
+        <label for="eAutomail">Upon Registration Completion, Are Users to Recieve an Auto Generated Email?</label><br> 
+
+        <input type="checkbox" id="ePOC" name="evPOC" value="True">
+        <label for="ePOC">Is There a Point of Contact</label><br> 
+
+        <input type="checkbox" id="eHCPOC" name="evHCPOC" value="True">
+        <label for="eHCPOC">Is There a Hosting Command Point of Contact</label><br>
+  <br><br> 
+        </fieldset> 
+    </div>
+    <br><br>
+    
+    <div id="third">
+        <center>
+        <input type="submit" value="Save" onclick="validate()">
+        <input type="button" value="Cancel">
+        </center>
+    </div>
+    
+</body>
+</html>
